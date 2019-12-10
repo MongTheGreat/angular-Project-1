@@ -26,7 +26,7 @@
                 </button>
               </td>
               <th>
-                P
+                Product
               </th>
               <th>
                 Code
@@ -50,7 +50,9 @@
           </thead>
           <tbody>
             <tr *ngFor='let product of products'>
-              <td></td>
+              <td>
+                <img [src]= 'product.imageUrl' [title]='product.productName'> 
+              </td>
               <td>{{product.productName}}</td>
               <td>{{product.productCode}}</td>
               <td>{{product.releaseDate}}</td>
