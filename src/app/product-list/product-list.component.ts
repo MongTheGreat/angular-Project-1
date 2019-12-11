@@ -19,12 +19,12 @@ export class ProductListComponent implements OnInit {
     return this._listFilter;
   }
 
-  set listFilter():string{
+  set listFilter(value:string){
     this._listFilter = value;
-    this.filteredProductss = this.listFilter?this.performFilter(this.listFilter):this.products;
+    this.filteredProducts = this.listFilter?this.performFilter(this.listFilter):this.products;
   }
 
-  filteredProductss: IProduct[];
+  filteredProducts: IProduct[];
   products:IProduct[] = [
   {
     "productId": 1,
@@ -89,7 +89,10 @@ toggleImage():void{
   this.showImage = !this.showImage;
 }
 
-  constructor() { }
+  constructor() {
+    this.filteredProducts = this.products;
+    this.listFilter = 'cart';
+   }
 
   ngOnInit() {
   }
