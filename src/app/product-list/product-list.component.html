@@ -58,7 +58,8 @@
               <td>{{product.productName}}</td>
               <td>{{product.productCode|lowercase|convertToSpaces:'-'}}</td>
               <td>{{product.releaseDate}}</td>
-              <td>{{product.price|currency:'R':'symbol':'1.2-2'}}</td>              <td>{{product.starRating}}</td>
+              <td>{{product.price|currency:'R':'symbol':'1.2-2'}}</td>
+              <td><app-star></app-star></td>
               
             </tr>
           </tbody>
