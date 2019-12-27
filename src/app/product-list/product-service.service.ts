@@ -12,11 +12,14 @@ export class ProductServiceService {
   private prodcutUrl = 'api/products/products.json';
   constructor(private http: HttpClient) { }
   getProdcust(): Observable<IProduct[]>{
-    return this.http.get<IProduct[]>(this.prodcutUrl.pipe(
-      tap(data => console.log('All: '+ JSON.stringify(data))),
-      catchError(this.handleError)
+    return this.http.get<IProduct[]>(this.prodcutUrl).pipe(
+                tap(data=> console.log('All: ' + JSON.stringify(data)))
+                catchError(this.handleError)
+
+
     );
+   
   }
-  private handleError(err:HttpErrorRespone)
+  private handleError(err: HttpErrorResponse){
 
 }
