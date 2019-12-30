@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import{ConvertToSpacesPipe} from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star/star.component';
+import { ProductService } from './product-list/product.service';
 
 
 
@@ -15,6 +16,7 @@ import { StarComponent } from './shared/star/star.component';
   imports:      [ BrowserModule, FormsModule ,HttpClientModule],
   declarations: [ AppComponent, HelloComponent, ProductListComponent,ConvertToSpacesPipe, StarComponent ],
   bootstrap:    [ AppComponent ],
+  providers: [ProductService],
  
 })
 export class AppModule { }
